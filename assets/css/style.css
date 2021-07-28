@@ -24,6 +24,28 @@ body {
     height: 60px;
 }
 
+#score-area {
+    margin: 5px auto;
+    width: 95%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.scores {
+    display: inline-block;
+    padding: 5px;
+}
+
+#scores {
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
+}
+
 #group-photo {
     width: 380px;
     height: 310px;
@@ -33,6 +55,12 @@ body {
     width: 380px;
     height: 300px;
     padding: 20px 0px 5px;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
