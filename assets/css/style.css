@@ -22,3 +22,37 @@ body {
     padding: 10px;
     box-shadow: 0 0 20px 1px;
 }
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    color: rgba(86,81,121,255);
+    font-size: 1.5em;
+    padding: 5px 10px;
+    background-color: whitesmoke;
+    border: 1px solid rgba(86,81,121,255);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    border-color: rgba(189,159,189,255);
+    background-color: rgba(189,159,189,255);
+    color: whitesmoke;
+}
+
+.btn.correct {
+    border-color: hsl(78, 47%, 55%, 1);
+    background-color: hsl(78, 47%, 55%, 0.5);
+    color: rgba(86,81,121,255);
+}
+
+.btn.wrong {
+    border-color: hsl(0, 53%, 58%, 1);
+    background-color: hsl(0, 53%, 58%, 0.5);
+    color: rgba(86,81,121,255);
+}
