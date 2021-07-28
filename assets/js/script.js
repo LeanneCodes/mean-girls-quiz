@@ -103,4 +103,67 @@ const questions = [
             {text: 'Gretchen', correct: true},
         ]
     }
+    , {
+        question: 'Who said, “On Wednesdays, we wear pink”?',
+        answers: [
+            {text: 'Mrs. George', correct: false},
+            {text: 'Ms. Norbury', correct: false},
+            {text: 'Karen', correct: true},
+            {text: 'Regina', correct: false},
+        ]
+    }
+    , {
+        question: 'Who said, “Raise your hand if you have ever been personally victimised by Regina George?”?',
+        answers: [
+            {text: 'Principal Duvall', correct: false},
+            {text: 'Ms. Norbury', correct: true},
+            {text: 'Mrs. George', correct: false},
+            {text: "Cady's Mom", correct: false},
+        ]
+    }
+    , {
+        question: 'Who said, “That’s why her hair is so big. It’s full of secrets.”?',
+        answers: [
+            {text: 'Janis', correct: false},
+            {text: 'Cady', correct: false},
+            {text: 'Gretchen', correct: false},
+            {text: 'Damian', correct: true},
+        ]
+    }
+    , {
+        question: 'Who said, “There are two kinds of evil people in this world. Those who do evil stuff and those who see evil stuff being done and do not try to stop it.”?',
+        answers: [
+            {text: "Cady's Mom", correct: false},
+            {text: 'Principal Duvall', correct: false},
+            {text: 'Cady', correct: false},
+            {text: 'Janis', correct: true},
+        ]
+    }
+    , {
+        question: 'Who said, “Made out with a hot dog? Oh my god that was one time!”?',
+        answers: [
+            {text: 'Janis', correct: false},
+            {text: 'Amber', correct: true},
+            {text: 'Karen', correct: false},
+            {text: 'Damian', correct: false},
+        ]
+    }
+    , {
+        question: 'Who said, “She doesn’t even go here!”?',
+        answers: [
+            {text: 'Kevin', correct: false},
+            {text: 'Damian', correct: true},
+            {text: 'Aaron', correct: false},
+            {text: 'Regina', correct: false},
+        ]
+    }
+    , {
+        question: 'Who said, “This is so fetch!”?',
+        answers: [
+            {text: 'Gretchen', correct: true},
+            {text: 'Cady', correct: false},
+            {text: 'Damian', correct: false},
+            {text: 'Principal Duvall', correct: false},
+        ]
+    }
 ]
