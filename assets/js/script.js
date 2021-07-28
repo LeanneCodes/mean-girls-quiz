@@ -3,6 +3,7 @@ const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+const scoreAreaElement = document.getElementById('score-area');
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -14,7 +15,7 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
     startButton.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random - 0.5);
+    shuffledQuestions = questions;
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
@@ -55,10 +56,39 @@ function selectAnswer(e) {
     })
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
+        scoreAreaElement.classList.remove('hide');
     } else {
-        startButton.innerText = 'Game Over';
+        startButton.innerText = 'Restart Quiz';
         startButton.classList.remove('hide');
     }
+}
+
+function checkAnswer() {
+    if (e.target=true) {
+        alert("Hey! You got it right! :D");
+        incrementScore();
+    } else {
+        alert(`Awww...better luck next time!`)
+        incrementWrongAnswer();
+    }
+
+    setNextQuestion();
+}
+
+/**
+ * gets the current score from the DOM and increments it by 1
+ */
+ function incrementScore() {
+    let oldScore = document.getElementById("score").innerText;
+    document.getElementById("score").innerText = ++oldScore;
+}
+
+/**
+ * gets the current tally of incorrect answers from the DOM and increments it by 1
+ */
+function incrementWrongAnswer() {
+    let oldScore = document.getElementById("incorrect").innerText;
+    document.getElementById("incorrect").innerText = ++oldScore;
 }
 
 function setStatusClass(element, correct) {
