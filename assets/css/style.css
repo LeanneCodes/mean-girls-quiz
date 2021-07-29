@@ -3,6 +3,7 @@
     font-family: 'Indie Flower', cursive, 'Lato', sans-serif;
 }
 
+/* Background of quiz */
 body {
     background-color: #d1bcd1;
     padding: 0;
@@ -14,6 +15,7 @@ body {
     align-items: center;
 }
 
+/* Mean Girls logo section */
 #title {
     height: 60px;
 }
@@ -23,11 +25,13 @@ body {
     height: 60px;
 }
 
+/* "Can you guess who said which quote?" */
 #introduction {
     font-family: 'Lato', sans-serif;
     text-align: center;
 }
 
+/* Score section */
 #score-area {
     margin: 5px auto;
     height: 50px;
@@ -49,6 +53,7 @@ body {
     font-size: 1.5em;
 }
 
+/* Mean Girls group photo image section */
 #group-photo {
     width: 380px;
     height: 290px;
@@ -60,16 +65,19 @@ body {
     padding: 15px 0px 0px;
 }
 
+/* To be applied to the Mean Girls logo and group photo */
 .center-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Adjust container for Start button */
 .container, .start.btn {
     width: fit-content;
 }
 
+/* Quiz container section */
 .container {
     width: 400px;
     max-height: 100%;
@@ -136,10 +144,202 @@ body {
     align-items: center;
 }
 
+/* To hide elements for centain points within the quiz */
 .hide {
     display: none;
 }
 
+/* To disable users clicking on the button multiple times */
 .disable {
     pointer-events: none;
+}
+
+@media screen and (min-width: 320px) {
+    #title {
+        height: 50px;
+    }
+    
+    #logo {
+        width: 280px;
+        height: 50px;
+    }
+    
+    #group-photo {
+        width: 280px;
+        height: 230px;
+    }
+    
+    #mean-girls {
+        width: 280px;
+        height: 230px;
+    }
+
+    .container {
+        width: 300px;
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    #title {
+        height: 55px;
+    }
+    
+    #logo {
+        width: 325px;
+        height: 55px;
+    }
+    
+    #group-photo {
+        width: 325px;
+        height: 235px;
+    }
+    
+    #mean-girls {
+        width: 325px;
+        height: 235px;
+    }
+
+    .container {
+        width: 350px;
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #title {
+        height: 100px;
+    }
+    
+    #logo {
+        width: 630px;
+        height: 100px;
+    }
+    
+    #introduction {
+        font-size: 2em;
+    }
+
+    #question {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        font-size: 2em;
+    }
+    
+    .start-btn {
+        font-size: 2em;
+    }
+
+    #score-area {
+        height: 70px;
+    }
+    
+    .scores {
+        display: block;
+        height: 50px;
+        font-size: 1.25em;
+    }
+
+    #group-photo {
+        width: 630px;
+        height: 440px;
+    }
+    
+    #mean-girls {
+        width: 630px;
+        height: 440px;
+    }
+
+    .container {
+        width: 650px;
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #title {
+        height: 130px;
+    }
+    
+    #logo {
+        width: 830px;
+        height: 130px;
+    }
+    
+    #introduction {
+        font-size: 2.25em;
+    }
+
+    .start-btn {
+        font-size: 2.8em;
+    }
+
+    #question {
+        font-size: 2.25em;
+    }
+
+    .btn {
+        font-size: 2.8em;
+    }
+
+    #score-area {
+        height: 80px;
+    }
+    
+    .scores {
+        display: block;
+        height: 50px;
+        font-size: 1.8em;
+    }
+
+    #group-photo {
+        width: 830px;
+        height: 620px;
+    }
+    
+    #mean-girls {
+        width: 830px;
+        height: 620px;
+    }
+
+    .container {
+        width: 850px;
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #title {
+        height: 170px;
+    }
+    
+    #logo {
+        width: 1150px;
+        height: 170px;
+    }
+
+    #introduction {
+        font-size: 2.75em;
+    }
+
+    #question {
+        font-size: 2.5em;
+    }
+    
+    #group-photo {
+        width: 1150px;
+        height: 850px;
+    }
+    
+    #mean-girls {
+        width: 1150px;
+        height: 830px;
+    }
+
+    .container {
+        width: 1200px;
+        height: fit-content;
+    }
 }
