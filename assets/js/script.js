@@ -1,11 +1,11 @@
-/** The constant variables that are needed to allow the quiz to work. */
+/** The variables that are needed to allow the quiz to work. */
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreAreaElement = document.getElementById('score-area');
-const introductionElement = document.getElementById('introduction');
+let countRightAnswers = 0;
 
 /** This let variable doesn't need a value assigned
  * we just need to declare it.
@@ -24,6 +24,7 @@ nextButton.addEventListener('click', () => {
  */
 function startGame() {
     startButton.classList.add('hide');
+    countRightAnswers = 0;
     listOfQuestions = questions;
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
@@ -49,15 +50,12 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
+        button.addEventListener('click', selectAnswer);
         if (answer.correct) {
             button.dataset.correct = answer.correct;
-            incrementScore();
-        } else {
-            incrementWrongAnswer();
-        }
-        button.addEventListener('click', selectAnswer);
+        } 
         answerButtonsElement.appendChild(button);
-    });
+    }); 
 }
 
 /** Before the user can move onto the next question
@@ -70,8 +68,6 @@ function showQuestion(question) {
 function resetState() {
     nextButton.classList.add('hide');
     scoreAreaElement.classList.add('hide');
-    score = 0;
-    incorrect = 0;
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -92,27 +88,15 @@ function selectAnswer(e) {
         startButton.classList.remove('hide');
     }
     scoreAreaElement.classList.remove('hide');
+    if (selectedButton.dataset = correct) {
+        countRightAnswers++;
+        alert('Correct!');
+     } else {
+         alert('Better luck next time!');
+     }
+     document.getElementById('right-answers').innerHTML = countRightAnswers;
 }
 
-/** Gets the current score from the DOM and increments
- * it by 1.
- */
- function incrementScore() {
-    let answerCorrectElement = document.getElementById('score').innerText;
-    document.getElementById("score").innerText = ++answerCorrectElement;
-}
-
-/** Gets the current tally of incorrect answers from the
- * DOM and increments it by 1.
- */
-function incrementWrongAnswer() {
-    let answerIncorrectElement = document.getElementById('incorrect').innerText;
-    document.getElementById("incorrect").innerText = ++answerIncorrectElement;   
-}
-
-/** If the cell strictly equals true, then the button turns green
- * if not, it will turn red.
- */
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {

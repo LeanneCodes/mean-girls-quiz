@@ -43,14 +43,10 @@ body {
     font-size: 0.75em;
 }
 
-#score {
+#right-answers {
     color: rgb(46, 150, 46);
     font-weight: bold;
-}
-
-#incorrect {
-    color: red;
-    font-weight: bold;
+    font-size: 1.5em;
 }
 
 #group-photo {
