@@ -5,12 +5,12 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreAreaElement = document.getElementById('score-area');
+const introductionElement = document.getElementById('introduction');
 
 /** This let variable doesn't need a value assigned
  * we just need to declare it.
  */
 let listOfQuestions, currentQuestionIndex
-
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
