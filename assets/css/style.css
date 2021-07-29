@@ -139,3 +139,7 @@ body {
 .hide {
     display: none;
 }
+
+.disable {
+    pointer-events: none;
+}

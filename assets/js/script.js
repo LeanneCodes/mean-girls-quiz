@@ -55,6 +55,7 @@ function showQuestion(question) {
             button.dataset.correct = answer.correct;
         } 
         answerButtonsElement.appendChild(button);
+        answerButtonsElement.classList.remove('disable')
     }); 
 }
 
@@ -82,6 +83,7 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct);
     });
     if (listOfQuestions.length > currentQuestionIndex + 1) {
+        answerButtonsElement.classList.add('disable');
         nextButton.classList.remove('hide');
     } else {
         startButton.innerText = 'Restart Quiz';
@@ -90,7 +92,6 @@ function selectAnswer(e) {
     scoreAreaElement.classList.remove('hide');
     if (selectedButton.dataset = correct) {
         countRightAnswers++;
-        alert('Correct!');
      } else {
          alert('Better luck next time!');
      }
