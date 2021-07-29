@@ -10,7 +10,7 @@ const introductionElement = document.getElementById('introduction');
 /** This let variable doesn't need a value assigned
  * we just need to declare it.
  */
-let listOfQuestions, currentQuestionIndex
+let listOfQuestions, currentQuestionIndex;
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -34,7 +34,7 @@ function startGame() {
  * will also return to the neutral colour palette.
  */
 function setNextQuestion() {
-    resetState()
+    resetState();
     showQuestion(listOfQuestions[currentQuestionIndex]);
 }
 
@@ -57,7 +57,7 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
-    })
+    });
 }
 
 /** Before the user can move onto the next question
@@ -84,7 +84,7 @@ function selectAnswer(e) {
     setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
-    })
+    });
     if (listOfQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
@@ -110,8 +110,11 @@ function incrementWrongAnswer() {
     document.getElementById("incorrect").innerText = ++answerIncorrectElement;   
 }
 
+/** If the cell strictly equals true, then the button turns green
+ * if not, it will turn red.
+ */
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
         element.classList.add('correct');
     } else {
@@ -119,11 +122,16 @@ function setStatusClass(element, correct) {
     }
 }
 
+/** When the user moves on to the next question, the previous
+ * score colours will be removed and the cells return to their
+ * neutral colour.
+ */
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
 
+/** Questions to be used in the quiz. */
 const questions = [
     {
         question: 'Who said, “On October 3rd, he asked me what day it was."?',
@@ -133,8 +141,7 @@ const questions = [
             {text: 'Aaron', correct: false},
             {text: 'Regina', correct: false},
         ]
-    }
-    , {
+    }, {
         question: 'Who said, “Get in, loser. We’re going shopping!”?',
         answers: [
             {text: 'Mrs. George', correct: false},
@@ -142,8 +149,7 @@ const questions = [
             {text: 'Janis', correct: false},
             {text: "Cady's Mom", correct: false},
         ]
-    }
-    , {
+    }, {
         question: 'Who said. "I am sorry that people are so jealous of me. But I cannot help it that I am popular."?',
         answers: [
             {text: 'Karen', correct: false},
@@ -151,8 +157,7 @@ const questions = [
             {text: 'Kevin', correct: false},
             {text: 'Gretchen', correct: true},
         ]
-    }
-    , {
+    }, {
         question: 'Who said, “On Wednesdays, we wear pink”?',
         answers: [
             {text: 'Mrs. George', correct: false},
@@ -160,8 +165,7 @@ const questions = [
             {text: 'Karen', correct: true},
             {text: 'Regina', correct: false},
         ]
-    }
-    , {
+    }, {
         question: 'Who said, “Raise your hand if you have ever been personally victimised by Regina George?”?',
         answers: [
             {text: 'Principal Duvall', correct: false},
@@ -169,8 +173,7 @@ const questions = [
             {text: 'Mrs. George', correct: false},
             {text: "Cady's Mom", correct: false},
         ]
-    }
-    , {
+    }, {
         question: 'Who said, “That’s why her hair is so big. It’s full of secrets.”?',
         answers: [
             {text: 'Janis', correct: false},
@@ -178,8 +181,7 @@ const questions = [
             {text: 'Gretchen', correct: false},
             {text: 'Damian', correct: true},
         ]
-    }
-    , {
+    }, {
         question: 'Who said, “There are two kinds of evil people in this world. Those who do evil stuff and those who see evil stuff being done and do not try to stop it.”?',
         answers: [
             {text: "Cady's Mom", correct: false},
@@ -187,8 +189,7 @@ const questions = [
             {text: 'Cady', correct: false},
             {text: 'Janis', correct: true},
         ]
-    }
-    , {
+    }, {
         question: 'Who said, “Made out with a hot dog? Oh my god that was one time!”?',
         answers: [
             {text: 'Janis', correct: false},
@@ -196,8 +197,7 @@ const questions = [
             {text: 'Karen', correct: false},
             {text: 'Damian', correct: false},
         ]
-    }
-    , {
+    }, {
         question: 'Who said, “She doesn’t even go here!”?',
         answers: [
             {text: 'Kevin', correct: false},
@@ -205,8 +205,7 @@ const questions = [
             {text: 'Aaron', correct: false},
             {text: 'Regina', correct: false},
         ]
-    }
-    , {
+    }, {
         question: 'Who said, “This is so fetch!”?',
         answers: [
             {text: 'Gretchen', correct: true},
@@ -215,4 +214,4 @@ const questions = [
             {text: 'Principal Duvall', correct: false},
         ]
     }
-]
+];
