@@ -74,7 +74,14 @@ function resetState() {
     }
 }
 
-/**  */
+/** This function fetches for the correct answer amongst the
+ * array of options that are listed in the Q&A section at the bottom
+ * of the script. It also notifies the system that once the
+ * user has come to end of the quiz, the quiz will restart from
+ * the beginning. Additionally, if a user gets an answer correct
+ * there score will increase by 1 each time. If not, an alert will
+ * pop up telling them "Better luck next time!".
+ */
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -116,10 +123,10 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
-/** Questions to be used in the quiz. */
+/** Questions and answers to be used in the quiz. */
 const questions = [
     {
-        question: 'Who said, “On October 3rd, he asked me what day it was."?',
+        question: 'Q1. Who said, “On October 3rd, he asked me what day it was."?',
         answers: [
             {text: 'Cady', correct: true},
             {text: 'Karen', correct: false},
@@ -127,7 +134,7 @@ const questions = [
             {text: 'Regina', correct: false},
         ]
     }, {
-        question: 'Who said, “Get in, loser. We’re going shopping!”?',
+        question: 'Q2. Who said, “Get in, loser. We’re going shopping!”?',
         answers: [
             {text: 'Mrs. George', correct: false},
             {text: 'Regina', correct: true},
@@ -135,7 +142,7 @@ const questions = [
             {text: "Cady's Mom", correct: false},
         ]
     }, {
-        question: 'Who said. "I am sorry that people are so jealous of me. But I cannot help it that I am popular."?',
+        question: 'Q3. Who said. "I am sorry that people are so jealous of me. But I cannot help it that I am popular."?',
         answers: [
             {text: 'Karen', correct: false},
             {text: 'Damian', correct: false},
@@ -143,7 +150,7 @@ const questions = [
             {text: 'Gretchen', correct: true},
         ]
     }, {
-        question: 'Who said, “On Wednesdays, we wear pink”?',
+        question: 'Q4. Who said, “On Wednesdays, we wear pink”?',
         answers: [
             {text: 'Mrs. George', correct: false},
             {text: 'Ms. Norbury', correct: false},
@@ -151,7 +158,7 @@ const questions = [
             {text: 'Regina', correct: false},
         ]
     }, {
-        question: 'Who said, “Raise your hand if you have ever been personally victimised by Regina George?”?',
+        question: 'Q5. Who said, “Raise your hand if you have ever been personally victimised by Regina George?”?',
         answers: [
             {text: 'Principal Duvall', correct: false},
             {text: 'Ms. Norbury', correct: true},
@@ -159,7 +166,7 @@ const questions = [
             {text: "Cady's Mom", correct: false},
         ]
     }, {
-        question: 'Who said, “That’s why her hair is so big. It’s full of secrets.”?',
+        question: 'Q6. Who said, “That’s why her hair is so big. It’s full of secrets.”?',
         answers: [
             {text: 'Janis', correct: false},
             {text: 'Cady', correct: false},
@@ -167,7 +174,7 @@ const questions = [
             {text: 'Damian', correct: true},
         ]
     }, {
-        question: 'Who said, “There are two kinds of evil people in this world. Those who do evil stuff and those who see evil stuff being done and do not try to stop it.”?',
+        question: 'Q7. Who said, “There are two kinds of evil people in this world. Those who do evil stuff and those who see evil stuff being done and do not try to stop it.”?',
         answers: [
             {text: "Cady's Mom", correct: false},
             {text: 'Principal Duvall', correct: false},
@@ -175,7 +182,7 @@ const questions = [
             {text: 'Janis', correct: true},
         ]
     }, {
-        question: 'Who said, “Made out with a hot dog? Oh my god that was one time!”?',
+        question: 'Q8. Who said, “Made out with a hot dog? Oh my god that was one time!”?',
         answers: [
             {text: 'Janis', correct: false},
             {text: 'Amber', correct: true},
@@ -183,7 +190,7 @@ const questions = [
             {text: 'Damian', correct: false},
         ]
     }, {
-        question: 'Who said, “She doesn’t even go here!”?',
+        question: 'Q9. Who said, “She doesn’t even go here!”?',
         answers: [
             {text: 'Kevin', correct: false},
             {text: 'Damian', correct: true},
@@ -191,7 +198,7 @@ const questions = [
             {text: 'Regina', correct: false},
         ]
     }, {
-        question: 'Who said, “This is so fetch!”?',
+        question: 'Q10. Who said, “This is so fetch!”?',
         answers: [
             {text: 'Gretchen', correct: true},
             {text: 'Cady', correct: false},
