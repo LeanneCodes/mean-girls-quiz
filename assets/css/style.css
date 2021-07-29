@@ -63,9 +63,12 @@ body {
     margin-right: auto;
 }
 
+.container, .start.btn {
+    width: fit-content;
+}
+
 .container {
-    width: 800px;
-    max-width: 80%;
+    width: 400px;
     max-height: 100%;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -128,10 +131,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container, .start.btn {
-    width: fit-content;
 }
 
 .hide {
