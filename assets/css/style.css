@@ -48,13 +48,13 @@ body {
 
 #group-photo {
     width: 380px;
-    height: 310px;
+    height: 300px;
 }
 
 #mean-girls {
     width: 380px;
     height: 300px;
-    padding: 20px 0px 5px;
+    padding: 20px 0px 0px;
 }
 
 .center-image {
