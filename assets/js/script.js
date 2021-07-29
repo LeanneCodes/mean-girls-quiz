@@ -1,3 +1,4 @@
+/** The constant variables that are needed to allow the quiz to work. */
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
@@ -5,7 +6,11 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreAreaElement = document.getElementById('score-area');
 
-let shuffledQuestions, currentQuestionIndex
+/** This let variable doesn't need a value assigned
+ * we just need to declare it.
+ */
+let listOfQuestions, currentQuestionIndex
+
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -13,19 +18,31 @@ nextButton.addEventListener('click', () => {
     setNextQuestion();
 });
 
+/** This is what the user will see first when the quiz loads
+ * Once the user has clicked on the start button
+ * they will be directed the first question.
+ */
 function startGame() {
     startButton.classList.add('hide');
-    shuffledQuestions = questions;
+    listOfQuestions = questions;
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
 }
 
+/** When the user moves onto the next question the cells
+ * will also return to the neutral colour palette.
+ */
 function setNextQuestion() {
     resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
+    showQuestion(listOfQuestions[currentQuestionIndex]);
 }
 
+/** For every question, the assigned answer options
+ * will appear in the 4 answer button cells. If the
+ * answer is correct it will highlight in green, if wrong,
+ * highlight in red.
+ */
 function showQuestion(question) {
     questionElement.innerText = question.question;
     question.answers.forEach(answer => {
@@ -34,19 +51,33 @@ function showQuestion(question) {
         button.classList.add('btn');
         if (answer.correct) {
             button.dataset.correct = answer.correct;
+            incrementScore();
+        } else {
+            incrementWrongAnswer();
         }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     })
 }
 
+/** Before the user can move onto the next question
+ * they need to choose an answer and then the next
+ * button will appear. When the next question does show,
+ * the answer buttons update with the new question.
+ * Additionally, the score will appear after an answer
+ * has been chosen and update accordingly.
+ */
 function resetState() {
     nextButton.classList.add('hide');
+    scoreAreaElement.classList.add('hide');
+    score = 0;
+    incorrect = 0;
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
 
+/**  */
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -54,41 +85,29 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    if (listOfQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
-        scoreAreaElement.classList.remove('hide');
     } else {
         startButton.innerText = 'Restart Quiz';
         startButton.classList.remove('hide');
     }
+    scoreAreaElement.classList.remove('hide');
 }
 
-function checkAnswer() {
-    if (e.target=true) {
-        alert("Hey! You got it right! :D");
-        incrementScore();
-    } else {
-        alert(`Awww...better luck next time!`)
-        incrementWrongAnswer();
-    }
-
-    setNextQuestion();
-}
-
-/**
- * gets the current score from the DOM and increments it by 1
+/** Gets the current score from the DOM and increments
+ * it by 1.
  */
  function incrementScore() {
-    let oldScore = document.getElementById("score").innerText;
-    document.getElementById("score").innerText = ++oldScore;
+    let answerCorrectElement = document.getElementById('score').innerText;
+    document.getElementById("score").innerText = ++answerCorrectElement;
 }
 
-/**
- * gets the current tally of incorrect answers from the DOM and increments it by 1
+/** Gets the current tally of incorrect answers from the
+ * DOM and increments it by 1.
  */
 function incrementWrongAnswer() {
-    let oldScore = document.getElementById("incorrect").innerText;
-    document.getElementById("incorrect").innerText = ++oldScore;
+    let answerIncorrectElement = document.getElementById('incorrect').innerText;
+    document.getElementById("incorrect").innerText = ++answerIncorrectElement;   
 }
 
 function setStatusClass(element, correct) {
