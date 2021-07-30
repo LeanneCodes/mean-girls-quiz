@@ -95,6 +95,7 @@ function selectAnswer(e) {
         answerButtonsElement.classList.add('disable');
         nextButton.classList.remove('hide');
     } else {
+        answerButtonsElement.classList.add('disable');
         startButton.innerText = 'Restart Quiz';
         startButton.classList.remove('hide');
     }
