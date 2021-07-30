@@ -42,7 +42,9 @@ function setNextQuestion() {
 /** For every question, the assigned answer options
  * will appear in the 4 answer button cells. If the
  * answer is correct it will highlight in green, if wrong,
- * highlight in red.
+ * highlight in red. The disable button is there to
+ * prevent users from clicking on the correct answer
+ * multiple of times.
  */
 function showQuestion(question) {
     questionElement.innerText = question.question;
