@@ -126,7 +126,7 @@ body {
 .btn.wrong {
     border-color: hsl(0, 53%, 58%, 1);
     background-color: hsl(0, 53%, 58%, 0.5);
-    color: whitesmoke;
+    color: rgb(245, 245, 245);
 }
 
 .start-btn {
