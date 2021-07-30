@@ -81,7 +81,7 @@ function resetState() {
  * of the script. It also notifies the system that once the
  * user has come to end of the quiz, the quiz will restart from
  * the beginning. Additionally, if a user gets an answer correct
- * there score will increase by 1 each time. If not, an alert will
+ * their score will increase by 1 each time. If not, an alert will
  * pop up telling them "Better luck next time!".
  */
 function selectAnswer(e) {
@@ -107,6 +107,10 @@ function selectAnswer(e) {
      document.getElementById('right-answers').innerHTML = countRightAnswers;
 }
 
+/** This function tells the system that when the user gets the
+ * answer correct, the appropriate colour formatting will be applied.
+ * The same function applies if the user gets the answer wrong.
+ */
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
