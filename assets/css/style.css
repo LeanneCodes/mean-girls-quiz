@@ -156,22 +156,52 @@ body {
 
 @media screen and (min-width: 320px) {
     #title {
-        height: 50px;
+        height: 45px;
     }
     
     #logo {
         width: 280px;
-        height: 50px;
+        height: 45px;
     }
     
     #group-photo {
         width: 280px;
-        height: 230px;
+        height: 220px;
     }
     
     #mean-girls {
         width: 280px;
-        height: 230px;
+        height: 220px;
+    }
+
+    #score-area {
+        height: 30px;
+        padding: 0px;
+    }
+    
+    .scores {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        margin: 0px;
+        height: 30px;
+        font-size: 0.75em;
+    }
+
+    #introduction {
+        font-size: 1em;
+    }
+
+    #question {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+    
+    .start-btn {
+        font-size: 1em;
     }
 
     .container {
@@ -198,6 +228,20 @@ body {
     #mean-girls {
         width: 325px;
         height: 235px;
+    }
+
+    #score-area {
+        height: 30px;
+        padding: 0px;
+    }
+    
+    .scores {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        margin: 0px;
+        height: 30px;
+        font-size: 0.75em;
     }
 
     .container {
