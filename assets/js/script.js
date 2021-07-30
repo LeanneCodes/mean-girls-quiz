@@ -57,7 +57,7 @@ function showQuestion(question) {
             button.dataset.correct = answer.correct;
         } 
         answerButtonsElement.appendChild(button);
-        answerButtonsElement.classList.remove('disable')
+        answerButtonsElement.classList.remove('disable');
     }); 
 }
 
