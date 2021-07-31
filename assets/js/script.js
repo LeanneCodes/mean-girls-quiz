@@ -103,7 +103,7 @@ function selectAnswer(e) {
     if (selectedButton.dataset = correct) {
         countRightAnswers++;
      } else {
-         alert('Better luck next time!');
+         alert('Your answer was incorrect. The correct answer is highlighted in green. Better luck next time!');
      }
      document.getElementById('right-answers').innerHTML = countRightAnswers;
 }
