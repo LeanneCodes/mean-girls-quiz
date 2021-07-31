@@ -181,7 +181,7 @@ const questions = [
             {text: 'Damian', correct: true},
         ]
     }, {
-        question: 'Q7. Who said, “There are two kinds of evil people in this world. Those who do evil stuff and those who see evil stuff being done and do not try to stop it.”?',
+        question: "Q7. Who said, “You're plastic. Cold, shiny, hard plastic!”?",
         answers: [
             {text: "Cady's Mom", correct: false},
             {text: 'Principal Duvall', correct: false},
