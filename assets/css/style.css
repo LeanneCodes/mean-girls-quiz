@@ -5,8 +5,8 @@
 
 /* Background of quiz */
 body {
-    background-color: #d1bcd1;
-    background-image: url("../images/lip-print-colour-2560x1080.png"), repeat;
+    background-color: white;
+    background-image: url("../images/lip-print-colour-2560x1080-transparency50.png");
     padding: 0;
     margin: 0;
     display: flex;
@@ -158,7 +158,8 @@ body {
 
 @media screen and (min-width: 320px) {
     body {
-        background-image: url(../images/lip-print-colour-500x1080.png);
+        background-color: white;
+        background-image: url(../images/lip-print-colour-500x1080-transparency50.png);
     }
     
     #title {
@@ -258,7 +259,8 @@ body {
 
 @media screen and (min-width: 500px) {
     body {
-        background-image: url("../images/lip-print-colour-1440x1080.png");
+        background-color: white;
+        background-image: url("../images/lip-print-colour-1440x1080-transparency50.png");
     }
     
     #title {
@@ -316,8 +318,16 @@ body {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     body {
-        background-image: url(../images/lip-print-colour-2560x1080.png);
+        background-color: white;
+        background-image: url(../images/lip-print-colour-1440x1080-transparency50.png);
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    body {
+        background-color: white;
+        background-image: url(../images/lip-print-colour-2560x1080-transparency50.png);
     }
 }
