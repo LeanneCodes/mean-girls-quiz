@@ -315,3 +315,9 @@ body {
         height: fit-content;
     }
 }
+
+@media screen and (min-width: 900px) {
+    body {
+        background-image: url(../images/lip-print-colour-2560x1080.png);
+    }
+}
