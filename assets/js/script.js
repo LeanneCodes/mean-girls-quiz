@@ -82,14 +82,11 @@ function resetState() {
  * array of options that are listed in the Q&A section at the bottom
  * of the script. It also notifies the system that once the
  * user has come to end of the quiz, the quiz will restart from
- * the beginning. Additionally, if a user gets an answer correct
- * their score will increase by 1 each time. If not, an alert will
- * pop up telling them "Better luck next time!".
+ * the beginning.
  */
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
-    let answer = selectedButton.dataset;
     setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
@@ -99,25 +96,27 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide');
     } else {
         answerButtonsElement.classList.add('disable');
-        /** startButton.innerText = 'Restart Quiz';
+        startButton.innerText = 'Restart Quiz';
         startButton.classList.remove('hide');
-        scoreAreaElement.classList.add('hide'); */
+        scoreAreaElement.classList.add('hide');
     } 
     scoreAreaElement.classList.remove('hide');
     let questionList = questions.length - 1;
-    console.log(questionList);
     if (currentQuestionIndex == questionList) {
-        checkAnswer();
-        answer,correct;
-        setTimeout(endGame, 3000);
+        checkAnswer(correct);
+        setTimeout(endGame);
     } else {
-        checkAnswer();
-        answer,correct;
+        checkAnswer(correct);
     }
 }
 
-function checkAnswer(answer, correct) {
-    if (answer == correct) {
+/** If the user input is correct, the score count will increase by 1.
+ * If not the the score count will remain as it is and the user will receive 
+ * the alert message within the function
+ */
+function checkAnswer(correct) {
+    console.log(correct)
+    if (correct) {
         countRightAnswers++;
      } else {
          alert('Your answer was incorrect. The correct answer is highlighted in green. Better luck next time!');
@@ -130,11 +129,11 @@ function checkAnswer(answer, correct) {
  */
 function endGame() {
     if (countRightAnswers == 10) {
-        alert("You're amazing! You're a true fan!");
-    } else if (countRightAnswers >= 7 < 10) {
+        alert("You got full marks! You're amazing and a true fan!");
+    } else if (countRightAnswers >= 6) {
         alert("You done really well! Let's get a higher score next time :)");
     } else {
-        alert("We suggest you watch the iconic film again!");
+        alert("Your final score wasn't amazing. We suggest you watch the iconic film again!");
     }
 }
 
