@@ -205,11 +205,11 @@ const questions = [
             {text: 'Regina', correct: false},
         ]
     }, {
-        question: 'Q10. Who said, “This is so fetch!”?',
+        question: "Q10. Who said, “Gretchen, stop trying to make fetch happen! It's not going to happen!”?",
         answers: [
-            {text: 'Gretchen', correct: true},
+            {text: 'Regina', correct: true},
             {text: 'Cady', correct: false},
-            {text: 'Damian', correct: false},
+            {text: 'Gretchen', correct: false},
             {text: 'Principal Duvall', correct: false},
         ]
     }
