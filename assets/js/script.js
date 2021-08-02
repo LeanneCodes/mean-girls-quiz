@@ -1,10 +1,11 @@
-/** The variables that are needed to allow the quiz to work. */
+// The variables that are needed to allow the quiz to work.
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreAreaElement = document.getElementById('score-area');
+const scoreReset = document.getElementById('right-answers');
 let countRightAnswers = 0;
 
 /** This let variable doesn't need a value assigned
@@ -12,6 +13,7 @@ let countRightAnswers = 0;
  */
 let listOfQuestions, currentQuestionIndex;
 
+// Loading the game with the essential event listeners
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
@@ -70,7 +72,7 @@ function showQuestion(question) {
  */
 function resetState() {
     nextButton.classList.add('hide');
-    scoreAreaElement.classList.add('hide');
+    scoreAreaElement.classList.remove('hide');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -130,7 +132,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
-/** Questions and answers to be used in the quiz. */
+// Questions and answers to be used in the quiz.
 const questions = [
     {
         question: 'Q1. Who said, “On October 3rd, he asked me what day it was."?',
