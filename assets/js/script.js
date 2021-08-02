@@ -89,6 +89,7 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
+    let answer = selectedButton.dataset;
     setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
@@ -98,16 +99,43 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide');
     } else {
         answerButtonsElement.classList.add('disable');
-        startButton.innerText = 'Restart Quiz';
+        /** startButton.innerText = 'Restart Quiz';
         startButton.classList.remove('hide');
-    }
+        scoreAreaElement.classList.add('hide'); */
+    } 
     scoreAreaElement.classList.remove('hide');
-    if (selectedButton.dataset = correct) {
+    let questionList = questions.length - 1;
+    console.log(questionList);
+    if (currentQuestionIndex == questionList) {
+        checkAnswer();
+        answer,correct;
+        setTimeout(endGame, 3000);
+    } else {
+        checkAnswer();
+        answer,correct;
+    }
+}
+
+function checkAnswer(answer, correct) {
+    if (answer == correct) {
         countRightAnswers++;
      } else {
          alert('Your answer was incorrect. The correct answer is highlighted in green. Better luck next time!');
      }
      document.getElementById('right-answers').innerHTML = countRightAnswers;
+}
+
+/** When the user has completed the quiz, a custom alert message
+ * will load and it will differ depending on the user's results.
+ */
+function endGame() {
+    if (countRightAnswers == 10) {
+        alert("You're amazing! You're a true fan!");
+    } else if (countRightAnswers >= 7 < 10) {
+        alert("You done really well! Let's get a higher score next time :)");
+    } else {
+        alert("We suggest you watch the iconic film again!");
+    }
 }
 
 /** This function tells the system that when the user gets the
