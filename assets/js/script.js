@@ -5,7 +5,6 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const scoreAreaElement = document.getElementById('score-area');
-const scoreReset = document.getElementById('right-answers');
 let countRightAnswers = 0;
 
 /** This let variable doesn't need a value assigned
@@ -129,9 +128,11 @@ function checkAnswer(correct) {
  */
 function endGame() {
     if (countRightAnswers == 10) {
-        alert("You got full marks! You're amazing and a true fan!");
-    } else if (countRightAnswers >= 6) {
+        alert("You got full marks! You're a true fan!");
+    } else if (countRightAnswers >= 7) {
         alert("You done really well! Let's get a higher score next time :)");
+    } else if (countRightAnswers >= 4) {
+        alert("So your score isn't the worst, but it's not great either. Restart the quiz and try again! :)");
     } else {
         alert("Your final score wasn't amazing. We suggest you watch the iconic film again!");
     }
