@@ -132,9 +132,9 @@ function endGame() {
     } else if (countRightAnswers >= 7) {
         alert("You done really well! Let's get a higher score next time :)");
     } else if (countRightAnswers >= 4) {
-        alert("So your score isn't the worst, but it's not great either. Restart the quiz and try again! :)");
+        alert("So your score isn't the worst... How about restarting the quiz and trying again! :)");
     } else {
-        alert("Your final score wasn't amazing. We suggest you watch the iconic film again!");
+        alert("With so many great quotes in the film, it can be hard to remember who said what. We suggest you watch the iconic film again!");
     }
 }
 
