@@ -117,8 +117,10 @@ function checkAnswer(correct) {
     console.log(correct);
     if (correct) {
         countRightAnswers++;
+        answerButtonsElement.classList.add('disable');
      } else {
          alert('Your answer was incorrect. The correct answer is highlighted in green. Better luck next time!');
+         answerButtonsElement.classList.add('disable');
      }
      document.getElementById('right-answers').innerHTML = countRightAnswers;
 }
