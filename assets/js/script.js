@@ -114,7 +114,7 @@ function selectAnswer(e) {
  * the alert message within the function
  */
 function checkAnswer(correct) {
-    console.log(correct)
+    console.log(correct);
     if (correct) {
         countRightAnswers++;
      } else {
