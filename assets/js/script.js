@@ -89,6 +89,7 @@ function selectAnswer(e) {
     setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
+        answerButtonsElement.classList.add('disable');
     });
     if (listOfQuestions.length > currentQuestionIndex + 1) {
         answerButtonsElement.classList.add('disable');
@@ -117,12 +118,13 @@ function checkAnswer(correct) {
     console.log(correct);
     if (correct) {
         countRightAnswers++;
-        answerButtonsElement.classList.add('disable');
+        document.getElementById("answer-buttons").disabled = true;
      } else {
          alert('Your answer was incorrect. The correct answer is highlighted in green. Better luck next time!');
-         answerButtonsElement.classList.add('disable');
+         document.getElementById("answer-buttons").disabled = true;
      }
      document.getElementById('right-answers').innerHTML = countRightAnswers;
+     answerButtonsElement.classList.add('disable');
 }
 
 /** When the user has completed the quiz, a custom alert message
