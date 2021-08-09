@@ -151,10 +151,10 @@ body {
     display: none;
 }
 
-/* To disable users clicking on the button multiple times */
+/* To disable users clicking on the button multiple times 
 .disable {
     pointer-events: none;
-}
+} */
 
 @media screen and (min-width: 320px) {
     body {
