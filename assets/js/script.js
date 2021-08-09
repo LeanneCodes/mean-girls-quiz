@@ -90,6 +90,7 @@ function selectAnswer(e) {
     setStatusClass(document.body, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
+        answerButtonsElement.classList.add('disable');
     });
     if (listOfQuestions.length > currentQuestionIndex + 1) {
         answerButtonsElement.classList.add('disable');
