@@ -118,10 +118,10 @@ function checkAnswer(correct) {
     console.log(correct);
     if (correct) {
         countRightAnswers++;
-        document.getElementById("answer-buttons").disabled = true;
+        document.getElementById("answer-buttons").disabled = false;
      } else {
          alert('Your answer was incorrect. The correct answer is highlighted in green. Better luck next time!');
-         document.getElementById("answer-buttons").disabled = true;
+         document.getElementById("answer-buttons").disabled = false;
      }
      document.getElementById('right-answers').innerHTML = countRightAnswers;
      answerButtonsElement.classList.add('disable');
