@@ -13,7 +13,9 @@ let countRightAnswers = 0;
  */
 let listOfQuestions, currentQuestionIndex;
 
-// Loading the game with the essential event listeners
+/** Loading the game with the essential event listeners
+ * Code sourced from StackOverflow
+*/
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
@@ -83,6 +85,7 @@ function resetState() {
  * of the script. It also notifies the system that once the
  * user has come to end of the quiz, the quiz will restart from
  * the beginning.
+ * This function was inspired by a few YouTube tutorials.
  */
 function selectAnswer(e) {
     const selectedButton = e.target;
