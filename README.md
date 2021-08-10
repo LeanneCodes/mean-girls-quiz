@@ -136,6 +136,9 @@ The live link can be found here -  [Mean Girls Quiz](https://leannecodes.github.
 * Typography
   * There were two main Google fonts used for the quiz, “Indie Flower” for the cursive text and “Lato”.
   * “Indie Flower” was chosen due to an integral prop in the Mean Girls movie, which was the “burn book”. The burn book included unkind messages the mean girls would write about other people. Given they would write these messages by hand, it was important for the quiz to replicate that style.
+
+![burn-book](https://user-images.githubusercontent.com/81588887/128934777-692b009f-8e77-4556-8c01-9b8e7222972f.jpeg)
+
   * The “Lato” font was chosen to add some balance to the style of the quiz, so the user playing could separate between what was an instruction, e.g., “Can you guess who said which quote?” and what needed to be answered in the “Indie Flower” font.
 * Background Image
   * The background image was sourced from Shutterstock and was chosen due to its complimentary colours to the quiz.
