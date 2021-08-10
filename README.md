@@ -22,7 +22,7 @@ The quiz is built with ten questions, with each question showing four answers, w
 ![mean-girls-makeup](https://user-images.githubusercontent.com/81588887/128765799-42b2ddac-fea1-46b4-a8da-d2fbc8815f15.png)
 
 * Background Image
-  * As mentioned previously this image was chosen to align well with the theme of makeup and the colours within the background image are a match for the colours within the group photo.
+  * As mentioned previously, this image was chosen to align well with the theme of makeup and the colours within the background image are a match for the colours within the group photo.
   * Additionally, the background image has been resized to accommodate various screen sizes, so that the scale of the screen’s device does not distort or distract the user from playing the quiz.
   * A 50% transparency filter was applied to the background image so that it wasn't distracting to the user's game play.
 
@@ -32,7 +32,7 @@ The quiz is built with ten questions, with each question showing four answers, w
   * When the user first loads the quiz, they will see an introduction title, “Can you guess who said which quote?” and a “Begin Quiz” button.
   * The introduction title is there to provide context to the user on what is expected from them. I.e., The quiz is a compilation of quotes, and the user needs to guess which character said which quote.
   * The “Begin Quiz” button acts as call-to-action button, prompting the user to click on the button in order to start the quiz.
-  * The quiz was built in this way, so that the user can decide if they want to participate in the quiz before being launched into it. From user research, 80% of participants wanted to be given a choice to start the quiz, as they felt leading with question one came across a little intense, as they felt they were not mentally ready to begin. 
+  * The quiz was built in this way, so that the user can decide if they want to participate in the quiz before being launched into it. From a user research study that I conducted, 80% of participants wanted to be given a choice to start the quiz, as they felt leading with question one came across a little intense, as they felt they were not mentally ready to begin. 
   * Even though there is no timer appended to the quiz, this seemed to be the preference for the users, hence the structure of the quiz.
 
 ![image](https://user-images.githubusercontent.com/81588887/128766618-a6a74290-4a7a-4d66-ba85-6d840b3d68aa.png)
@@ -41,7 +41,9 @@ The quiz is built with ten questions, with each question showing four answers, w
   * Once the user has clicked the “Begin Quiz” button, a new frame appears, where the user is asked who said a specific quote and a list of four potential answers, where only one is correct.
   * When the user hovers over a particular answer on desktop or where a mouse is connected to a device, the button cell changes from a neutral state (white button, purple border and text) to the hovered state (purple button and white text).
   * If the option they select is correct, the button will change from the hovered state to the correct state (green button and border with purple text). Additionally, the score will increase by one and it will be noted in the middle of the frame. As there are a maximum of ten questions, the score will be out of ten.
+  * *(The first three images represent the above three points)*
   * If the option they chose was incorrect, the hovered state cell will turn to the wrong state (red button and border with white text) and their score will not increase. Moreover, the user will receive an alert stating the option they chose was incorrect and the correct answer is highlighted in green.
+  * *(The last two images represent the last point)*
 
 ![image](https://user-images.githubusercontent.com/81588887/128768081-566d7ea1-c7b0-4b97-b547-f7304d0d12bd.png)
 ![image](https://user-images.githubusercontent.com/81588887/128768426-bdec0018-7f5a-4bf3-8f24-2e142eb2af2e.png)
@@ -81,7 +83,7 @@ This quiz was tested on the following devices and browsers:
     * Safari
     * Microsoft Edge
 
-Quiz works perfectly across all devices and browsers, except for iPhone, where the known bugs are listed soon after.
+Quiz works perfectly across all devices and browsers, except for iPhone, where the known bugs are listed shortly.
 
 ## Validator Testing
 * HTML5
@@ -99,7 +101,7 @@ Quiz works perfectly across all devices and browsers, except for iPhone, where t
 ## Known Bugs
 * On iOS devices, the user can repeatedly click on the same correct answer for a higher score, despite not completing the full quiz or initially getting the answer wrong. After research and guidance from tutor support, this bug seems to be isolated to iOS devices. The ‘disabled’ syntax appears to work for non-iOS devices and browsers.
 * On iOS devices, the text colour of the answer buttons is different to non-iOS devices and browsers. For example, on non-iOS devices and browsers, the correct answer is in dark purple text and the wrong answer is in white text. However, on iOS devices, the correct answer, if chosen correctly first, is in white text and the wrong answers are in dark purple text. Although, if the user selects the wrong answer first, the wrong answer chosen is in white text, and the remaining answer buttons are in dark purple text.
-* See below an example of a user clicking on the wrong answer on two different software devices:
+* See below an example of a user clicking on the wrong answer on two different software mobile devices (iPhone and Motorola):
 
 <img width="654" alt="ios-versus-non-ios" src="https://user-images.githubusercontent.com/81588887/128928812-bdca56b2-a8e7-475c-8a6c-ee4eeb4bf98e.png">
 
@@ -134,10 +136,9 @@ The live link can be found here -  [Mean Girls Quiz](https://leannecodes.github.
 * Typography
   * There were two main Google fonts used for the quiz, “Indie Flower” for the cursive text and “Lato”.
   * “Indie Flower” was chosen due to an integral prop in the Mean Girls movie, which was the “burn book”. The burn book included unkind messages the mean girls would write about other people. Given they would write these messages by hand, it was important for the quiz to replicate that style.
-  * The “Lato” font was chosen to add some balance to the style of the quiz and so the user playing could separate between what was an instruction, e.g., “Can you guess who said which quote?” and what needed to be answered in the “Indie Flower” font.
+  * The “Lato” font was chosen to add some balance to the style of the quiz, so the user playing could separate between what was an instruction, e.g., “Can you guess who said which quote?” and what needed to be answered in the “Indie Flower” font.
 * Background Image
   * The background image was sourced from Shutterstock and was chosen due to its complimentary colours to the quiz.
-  * Additionally, the lip print can be inferred that the girls from the group photo left those marks as they are applying makeup. 
 
 # Technologies Used
 * HTML5
@@ -156,7 +157,7 @@ The live link can be found here -  [Mean Girls Quiz](https://leannecodes.github.
   * Background image came from Shutterstock
 * Code
   * YouTube tutorials on structuring the quiz
-  * StackOverflow for disabling the buttons
+  * StackOverflow for disabling the buttons and the event listener code
 * Acknowledgements
   * My Mentor Rahul for his ongoing support and feedback
   * The Code Institute's Tutor Support
