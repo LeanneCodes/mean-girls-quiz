@@ -99,14 +99,25 @@ Quiz works perfectly across all devices and browsers, except for iPhone, where t
 ## Known Bugs
 * On iOS devices, the user can repeatedly click on the same correct answer for a higher score, despite not completing the full quiz or initially getting the answer wrong. After research and guidance from tutor support, this bug seems to be isolated to iOS devices. The ‘disabled’ syntax appears to work for non-iOS devices and browsers.
 * On iOS devices, the text colour of the answer buttons is different to non-iOS devices and browsers. For example, on non-iOS devices and browsers, the correct answer is in dark purple text and the wrong answer is in white text. However, on iOS devices, the correct answer, if chosen correctly first, is in white text and the wrong answers are in dark purple text. Although, if the user selects the wrong answer first, the wrong answer chosen is in white text, and the remaining answer buttons are in dark purple text.
+* See below an example of a user clicking on the wrong answer on two different software devices:
+
+<img width="654" alt="ios-versus-non-ios" src="https://user-images.githubusercontent.com/81588887/128928812-bdca56b2-a8e7-475c-8a6c-ee4eeb4bf98e.png">
 
 ## User Stories
-* Visitor A (A Mean Girls fan)
+* Visitor A (A Mean Girls movie fan)
     * They wanted a quiz that tested their knowledge of the film’s iconic quotes. With this user receiving full marks, helped validate that they truly know the film inside and out.
-* Visitor B (Have watched the film, but not familiar with the iconic quotes)
+
+![IMG_6C6703EA367E-1](https://user-images.githubusercontent.com/81588887/128929874-01f15307-3bb6-4ca3-b5db-e68e7591552e.jpeg)
+
+* Visitor B (They have watched the film, but not familiar with the iconic quotes)
     * They found the quiz quite challenging, as they had watched the film in the past, but more for the storyline than remembering who said what. This led to the user receiving a mid-range score. However, the prompt encourages them to try again so they are more familiar with the quotes and the quiz becomes more fun for them to enjoy on the second round.
-* Visitor C (Has never watched the film)
+
+![IMG_73E2E379570E-1](https://user-images.githubusercontent.com/81588887/128930072-b7659145-d1ce-482e-b673-22a3272c6b9d.jpeg)
+
+* Visitor C (They have never watched the film)
     * They also found the quiz quite challenging, as they had no context of the film, but found the quiz easy to navigate through and learnt some iconic quotes along the way, even if they don’t remember who said the quote. This quiz encouraged them to watch the film, which they happened to enjoy.
+
+![IMG_56F507AE215F-1](https://user-images.githubusercontent.com/81588887/128930224-9dd16d24-90bc-4353-8470-7f3c0e48ce84.jpeg)
 
 ## Deployment
 * The website was deployed to GitHub. The steps to deploy are as follows:
@@ -115,7 +126,7 @@ Quiz works perfectly across all devices and browsers, except for iPhone, where t
 * Under "Source" ensure you select "main"
 * Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here -  
+The live link can be found here -  [Mean Girls Quiz](https://leannecodes.github.io/mean-girls-quiz/)
 
 # Design
 * Colour Scheme
